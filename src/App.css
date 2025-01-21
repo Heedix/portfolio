@@ -1,0 +1,15 @@
+/*:root {
+  --border-color: #000;
+  --background: radial-gradient(115.47% 153.8% at -1.28% -3.49%, #76FF64 0%, #FFF 44.32%, #A5FFF4 100%);
+}*/
+
+.landingPageInfoContainer {
+  margin: 50px auto;
+  background-color: transparent;
+  backdrop-filter: blur(150px);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  width: fit-content;
+  max-width: 1200px;
+  height: fit-content;
+}

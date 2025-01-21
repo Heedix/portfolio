@@ -1,0 +1,213 @@
+body {
+    --max-row-span: 2;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--divider-color);
+}
+
+.landingPageInfo {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+    padding-bottom: 25px;
+}
+
+.profilePictureContainerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 348px;
+    height: 348px;
+    margin: auto;
+}
+
+.profilePictureContainer {
+    position: relative;
+    width: 248px;
+    height: 248px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.profilePictureContainer:hover {
+    animation-name: profile-animation;
+    cursor: pointer;
+}
+
+.profilePicture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.kachow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.kachow:hover {
+    animation-name: kachow-animation;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+}
+
+.profileInfoContainer {
+    margin: 25px 25px 0;
+}
+
+.profileInfoContainer h1,
+.profileInfoContainer h2,
+.profileInfoContainer p,
+.profileInfoContainer div {
+    margin: 5px 25px;
+}
+
+.greeting {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.greeting h2 {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.name {
+    text-decoration: none;
+}
+
+.name:hover {
+    text-decoration: underline;
+}
+
+.profileDescription {
+    color: var(--subtle-font-color);
+}
+
+.rowDivider {
+    width: calc(100% - 50px);
+    grid-column: span var(--max-row-span);
+    margin: 0 25px;
+}
+
+.programmingLanguagesContainer {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: span var(--max-row-span);
+    margin: 0 25px;
+}
+
+.pillsContainer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.PFTCContainers {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: span var(--max-row-span);
+    margin: 0 25px;
+}
+
+
+
+@media (max-width: 1100px) {
+    body {
+        --max-row-span: 1;
+    }
+    .landingPageInfo {
+        grid-template-columns: auto;
+    }
+    .profilePictureContainer {
+        margin: 50px auto;
+    }
+
+    .profileInfoContainer h1,
+    .profileInfoContainer h2,
+    .profileInfoContainer p,
+    .profileInfoContainer div {
+        margin: 5px 0;
+    }
+    .greeting h2 {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    body {
+        --max-row-span: 1;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .landingPageInfo {
+        grid-template-columns: auto;
+    }
+    .profilePictureContainer {
+        margin: 50px auto;
+    }
+    .profileInfoContainer h1,
+    .profileInfoContainer h2,
+    .profileInfoContainer p,
+    .profileInfoContainer div {
+        margin: 5px 0;
+    }
+    .greeting h2 {
+        margin-right: 15px;
+    }
+}
+
+@keyframes profile-animation {
+    0% {
+        width: 248px;
+        height: 248px;
+    }
+    50% {
+        width: 273px;
+        height: 273px;
+        transform: rotate(0deg);
+    }
+    100% {
+        width: 273px;
+        height: 273px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes kachow-animation {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+:root {
+  --border-color: #FFF;
+  --font-color: #FFF;
+  --divider-color: #FFFFFF75;
+  --subtle-border-color: #BBBBBB;
+  --subtle-font-color: #BBBBBB;
+  --background: radial-gradient(115.47% 153.8% at -1.28% -3.49%, #04362E 0%, #000 44.32%, #0F0A12 100%) no-repeat ;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 3000px;
+
+  /*Firefox scrollbar styling*/
+  scrollbar-width: none;
+}
+
+/*Chrome/Safari scrollbar styling*/
+::-webkit-scrollbar {
+  --scb-width: 0px;
+  width: var(--scb-width);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  --scb-width: 12px;
+}
+
+/* Style the thumb when it's hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: #858585; /* Color of the thumb when hovered */
+}
+
+h1 {
+  color: var(--font-color);
+  font-family: "IBM Plex Mono", "JetBrains Mono", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+h2 {
+  color: var(--font-color);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+p {
+  color: var(--font-color);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+button {
+
+}

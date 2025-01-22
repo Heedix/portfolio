@@ -65,10 +65,9 @@ hr {
     margin: 25px 25px 0;
 }
 
-.profileInfoContainer h1,
-.profileInfoContainer h2,
-.profileInfoContainer p,
-.profileInfoContainer div {
+.profileHeader,
+.profileDescription,
+.greeting {
     margin: 5px 25px;
 }
 
@@ -78,17 +77,47 @@ hr {
     margin-bottom: 10px;
 }
 
-.greeting h2 {
+.hiThere {
     margin-right: 20px;
     margin-left: 0;
 }
 
-.name {
-    text-decoration: none;
+.nameContainer {
+    position: relative;
+    overflow: hidden;
 }
 
-.name:hover {
-    text-decoration: underline;
+.nameContainer:hover .nameUnderlineLeft {
+    animation: text-underline-left-animation 0.5s forwards;
+}
+
+.nameContainer:hover .nameUnderlineRight {
+    animation: text-underline-right-animation 0.3s forwards 0.2s;
+}
+
+.name {
+    text-decoration: none;
+    margin: 0;
+}
+
+.nameUnderlineLeft {
+    position: absolute;
+    width: 78%;
+    height: 2px;
+    background-color: var(--font-color);
+    bottom: 10%;
+    left: 0;
+    transform: translateX(-101%);
+}
+
+.nameUnderlineRight {
+    position: absolute;
+    width: 13.5%;
+    height: 2px;
+    background-color: var(--font-color);
+    bottom: 10%;
+    right: 0;
+    transform: translateX(110%);
 }
 
 .profileDescription {
@@ -139,14 +168,16 @@ hr {
         margin: 50px auto;
     }
 
-    .profileInfoContainer h1,
-    .profileInfoContainer h2,
-    .profileInfoContainer p,
-    .profileInfoContainer div {
+    .profileHeader,
+    .profileDescription,
+    .greeting {
         margin: 5px 0;
     }
-    .greeting h2 {
+    .hiThere {
         margin-right: 20px;
+    }
+    .nameContainer {
+        margin: 0;
     }
 }
 
@@ -169,13 +200,12 @@ hr {
     .profilePictureContainer {
         margin: 50px auto;
     }
-    .profileInfoContainer h1,
-    .profileInfoContainer h2,
-    .profileInfoContainer p,
-    .profileInfoContainer div {
+    .profileHeader,
+    .profileDescription,
+    .greeting {
         margin: 5px 0;
     }
-    .greeting h2 {
+    .hiThere {
         margin-right: 15px;
     }
 }

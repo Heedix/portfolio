@@ -18,8 +18,12 @@ export default function LandingPageInfo() {
                     <h1 className="profileHeader">Portfolio</h1>
                     <hr className="dividerPortfolioName"></hr>
                     <div className="greeting">
-                        <h2 className="profileName">Hi there! 👋 I'm</h2>
-                        <h2 className="name">Jannis Austgen</h2>
+                        <h2 className="hiThere">Hi there! 👋 I'm</h2>
+                        <div className="nameContainer">
+                            <h2 className="name">Jannis Austgen</h2>
+                            <div className="nameUnderlineLeft"></div>
+                            <div className="nameUnderlineRight"></div>
+                        </div>
                     </div>
                     <p className="profileDescription">🎓 Computer Science Student passionate about building innovative and efficient software solutions.</p>
                     <p className="profileDescription">💡 I thrive on tackling challenges in web development, and everything in between.</p>

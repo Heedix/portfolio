@@ -6,6 +6,7 @@
   --divider-color: #FFFFFF75;
   --subtle-border-color: #BBBBBB;
   --subtle-font-color: #BBBBBB;
+  --blury-background-color: #FFFFFF20;
   --background: radial-gradient(115.47% 153.8% at -1.28% -3.49%, #04362E 0%, #000 44.32%, #0F0A12 100%) no-repeat ;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -69,6 +70,16 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  color: var(--font-color);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
 p {
   color: var(--font-color);
   font-family: "IBM Plex Mono", sans-serif;
@@ -77,6 +88,11 @@ p {
   font-weight: 400;
   line-height: normal;
   margin: 0;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
 }
 
 button {

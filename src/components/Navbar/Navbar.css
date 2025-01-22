@@ -1,0 +1,98 @@
+.navbarContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    min-height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+.toggleNavbarButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    height: fit-content;
+    min-height: 50px;
+    background-color: var(--blury-background-color);
+    backdrop-filter: blur(100px);
+    border: var(--border-color) solid 2px;
+    border-radius: 12px;
+    transition: transform 0.5s;
+}
+
+.navbarAboutContainer,
+.navbarProjectsContainer,
+.navbarContactContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbarAboutContainer:hover .navbarAboutUnderline,
+.navbarProjectsContainer:hover .navbarProjectsUnderlineLeft,
+.navbarContactContainer:hover .navbarContactUnderline{
+    animation: text-underline-left-animation 0.5s forwards;
+}
+
+.navbarProjectsContainer:hover .navbarProjectsUnderlineRight {
+    animation: text-underline-right-animation 0.5s forwards;
+}
+
+.underline {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--font-color);
+    bottom: 10%;
+    transform: translateX(-101%);
+}
+
+.navbarAboutUnderline {
+    left: 0;
+}
+
+.navbarProjectsUnderlineLeft {
+    width: 37%;
+    bottom: 10%;
+    left: 0;
+}
+
+.navbarProjectsUnderlineRight {
+    width: 50%;
+    right: 0;
+    transform: translateX(110%);
+}
+
+.navbarContactUnderline {
+    left: 0;
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        width: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        overflow: hidden;
+    }
+    .navbarAboutContainer,
+    .navbarProjectsContainer,
+    .navbarContactContainer {
+        margin: 0 10px;
+    }
+}

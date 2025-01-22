@@ -4,12 +4,30 @@
 }*/
 
 .landingPageInfoContainer {
-  margin: 50px auto;
-  background-color: transparent;
-  backdrop-filter: blur(150px);
+  margin: 100px auto;
+  background-color: var(--blury-background-color);
+  backdrop-filter: blur(100px);
   border: 2px solid var(--border-color);
   border-radius: 12px;
   width: fit-content;
   max-width: 1200px;
   height: fit-content;
+}
+
+@keyframes text-underline-left-animation {
+  0% {
+    transform: translateX(-101%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes text-underline-right-animation {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

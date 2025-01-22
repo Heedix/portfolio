@@ -4,14 +4,20 @@
 }*/
 
 .landingPageInfoContainer {
-  margin: 100px auto;
+  margin: 50px auto;
   background-color: var(--blury-background-color);
   backdrop-filter: blur(100px);
   border: 2px solid var(--border-color);
   border-radius: 12px;
-  width: fit-content;
+  width: 90%;;
   max-width: 1200px;
   height: fit-content;
+}
+
+@media (max-width: 550px) {
+  .landingPageInfoContainer {
+    margin-top: 25px;
+  }
 }
 
 @keyframes text-underline-left-animation {

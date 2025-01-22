@@ -73,10 +73,6 @@ export default function LandingPageInfo() {
                         Currently I'm focussing on building a website displaying my recent projects. <br/>
                         In addition to this the website should represent some of my CSS and TypeScript skills. <br/>
                     </p>
-                    <div className="pillsContainer">
-                        <Pill text={'🔗Link to Website'}></Pill>
-                        <Pill text={'🔗Link to GitHub'}></Pill>
-                    </div>
                 </div>
             </div>
         </>

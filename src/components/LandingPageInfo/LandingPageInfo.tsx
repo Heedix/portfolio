@@ -75,8 +75,12 @@ export default function LandingPageInfo() {
                     </p>
                     <div className="currentFocusLearnMoreContainer">
                         <p className="currentFocusLearnMore">Learn more</p>
-                        <svg>
-
+                        <svg className="learnMoreArrowsSvg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="learnMoreArrowContainer" clip-path="url(#clip0_79_2)">
+                                <path id="arrow1" d="M31.208 38.97a1 1 0 0 0 1.584 0L58.473 5.61A1 1 0 0 0 57.681 4H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>
+                                <path id="arrow2" d="M31.208 38.97a1 1 0 0 0 1.584 0L58.473 5.61A1 1 0 0 0 57.681 4H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>
+                                <path id="arrow3" d="M31.208 59.97a1 1 0 0 0 1.584 0l25.681-33.36a1 1 0 0 0-.792-1.61H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>
+                            </g>
                         </svg>
                     </div>
                 </div>

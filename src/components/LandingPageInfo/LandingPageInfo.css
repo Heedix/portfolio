@@ -163,6 +163,47 @@ hr {
     height: fit-content;
 }
 
+.learnMoreArrowsSvg {
+    margin-top: 10px;
+}
+
+.learnMoreArrowsSvg:hover {
+    cursor: pointer;
+}
+
+.learnMoreArrowsSvg:hover #arrow1 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.learnMoreArrowsSvg:hover #arrow2 {
+    transform: translateY(30%);
+}
+
+.learnMoreArrowsSvg:hover #arrow3 {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+#arrow1,
+#arrow2,
+#arrow3 {
+    transition: 0.5s;
+}
+
+#arrow1 {
+    fill: #19EFD275;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+#arrow2 {
+    fill: #E7488F75;
+}
+
+#arrow3 {
+    fill: #2A7FDC75;
+}
 
 @media (max-width: 1100px) {
     body {

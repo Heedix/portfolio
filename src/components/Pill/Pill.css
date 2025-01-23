@@ -1,28 +1,17 @@
-/*.pillBorder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 50px;
-    border: 3px solid transparent;
-    mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
-    mask-composite: exclude;
-    isolation: isolate;
-}*/
-
 .pill {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 2px var(--border-color);
+    border: solid 2px var(--subtle-border-color);
     border-radius: 50px;
     width: fit-content;
     min-width: 20px;
     height: fit-content;
     background-color: transparent;
-
     padding: 5px 10px;
     text-align: center;
+}
+
+.pillText {
+    color: var(--subtle-font-color);
 }

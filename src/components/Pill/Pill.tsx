@@ -14,8 +14,12 @@ const getRandomGradient = () => {
         "#A183FF30",
         "#33FFF530",
     ];
-    const color1 = colors[Math.floor(Math.random() * colors.length)];
-    const color2 = colors[Math.floor(Math.random() * colors.length)];
+    let color1;
+    let color2;
+    do {
+        color1 = colors[Math.floor(Math.random() * colors.length)];
+        color2 = colors[Math.floor(Math.random() * colors.length)];
+    } while (color1 === color2);
     return `linear-gradient(135deg, ${color1}, ${color2})`;
 };
 

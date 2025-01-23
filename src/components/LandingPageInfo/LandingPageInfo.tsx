@@ -26,8 +26,8 @@ export default function LandingPageInfo() {
                         </div>
                     </div>
                     <p className="profileDescription">🎓 Computer Science Student passionate about building innovative and efficient software solutions.</p>
-                    <p className="profileDescription">💡 I thrive on tackling challenges in web development, and everything in between.</p>
-                    <p className="profileDescription">🚀 Let's create something amazing together! Feel free to check out my projects and connect with me.</p>
+                    <p className="profileDescription">💡 I thrive on tackling challenges in web and desktop application development, creating intuitive user interfaces, and robust, reliable software.</p>
+                    <p className="profileDescription">🚀 Feel free to check out my projects and connect with me.</p>
                 </div>
                 <hr className="rowDivider"/>
                 <div className="programmingLanguagesContainer, PFTCContainers">
@@ -70,9 +70,15 @@ export default function LandingPageInfo() {
                 <div className="currentFocusContainer, PFTCContainers">
                     <h2 className="currentFocusHeader">🔎Current Focus:</h2>
                     <p>
-                        Currently I'm focussing on building a website displaying my recent projects. <br/>
-                        In addition to this the website should represent some of my CSS and TypeScript skills. <br/>
+                        Currently I'm focussing on building a website displaying my recent projects, <br/>
+                        while showcasing some of my web development skills.
                     </p>
+                    <div className="currentFocusLearnMoreContainer">
+                        <p className="currentFocusLearnMore">Learn more</p>
+                        <svg>
+
+                        </svg>
+                    </div>
                 </div>
             </div>
         </>

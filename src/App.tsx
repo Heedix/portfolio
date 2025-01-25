@@ -1,6 +1,7 @@
 import './App.css'
 import LandingPageInfo from './components/LandingPageInfo/LandingPageInfo.tsx'
 import Navbar from "./components/Navbar/Navbar.tsx";
+import ProjectSection from "./components/PrijectSection/ProjectSection.tsx";
 
 function App() {
 
@@ -11,6 +12,9 @@ function App() {
         </div>
         <div className="landingPageInfoContainer">
             <LandingPageInfo />
+        </div>
+        <div className="projectSectionContainer">
+            <ProjectSection />
         </div>
     </>
   )

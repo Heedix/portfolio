@@ -15,7 +15,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: var(--background) no-repeat fixed;
+  background: var(--background) no-repeat center center;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

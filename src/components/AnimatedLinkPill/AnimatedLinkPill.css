@@ -1,0 +1,31 @@
+.animatedLinkPill {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border: var(--border-color) 2px solid;
+    border-radius: 50px;
+}
+
+.animatedLinkPillInnerContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background-color: red;
+    border-radius: 50px;
+}
+
+.animatedLinkPill:hover .animatedLinkPillInnerContainer {
+    width: fit-content;
+}
+
+.animatedLinkPillArrowContainer {
+    min-width: fit-content;
+}

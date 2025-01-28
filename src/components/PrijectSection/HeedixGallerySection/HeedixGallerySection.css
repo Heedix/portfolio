@@ -6,8 +6,8 @@ hr {
 .heedixGallerySection {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     background-color: var(--blury-background-color);
     backdrop-filter: blur(100px);
     border: 2px solid var(--border-color);
@@ -63,6 +63,20 @@ hr {
     width: 100%;
     height: 100%;
     border-radius: 12px;
+}
+
+.heedixGallerySectionTechnologiesUsed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@keyframes border-fadein {
+    from {
+        border-color: transparent;
+    } to {
+        border-color: var(--border-color);
+    }
 }
 
 @media (max-width: 1200px) {

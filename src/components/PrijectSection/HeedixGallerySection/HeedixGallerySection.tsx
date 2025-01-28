@@ -1,4 +1,6 @@
 import './HeedixGallerySection.css';
+import Pill from "../../Pill/Pill.tsx";
+import AnimatedLinkPill from "../../AnimatedLinkPill/AnimatedLinkPill.tsx";
 
 export default function HeedixGallerySection() {
 
@@ -47,6 +49,23 @@ export default function HeedixGallerySection() {
                         onMouseOut={e => e.currentTarget.pause()}
                     />
                 </div>
+            </div>
+            <div className="heedixGallerySectionTechnologiesUsed">
+                <h2 className="heedixGallerySectionTechnologiesUsedHeader">Technologies Used:</h2>
+                <div className="pillsContainer">
+                    <Pill text={'Angular'}></Pill>
+                    <Pill text={'TypeScript'}></Pill>
+                    <Pill text={'Express.js'}></Pill>
+                    <Pill text={'JavaScript'}></Pill>
+                    <Pill text={'PostgreSQL'}></Pill>
+                    <Pill text={'Figma'}></Pill>
+                    <Pill text={'Git'}></Pill>
+                    <Pill text={'GitHub Actions'}></Pill>
+                    <Pill text={'Docker'}></Pill>
+                </div>
+            </div>
+            <div className="heedixGallerySectionLinks">
+                <AnimatedLinkPill text={'GitHub'} link={'https://github.com/Heedix/heedix-gallery'}/>
             </div>
         </div>
     )

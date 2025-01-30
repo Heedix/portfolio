@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
 :root {
+  --dark-color: #000000A0;
   --border-color: #FFF;
   --font-color: #FFF;
   --divider-color: #FFFFFF75;

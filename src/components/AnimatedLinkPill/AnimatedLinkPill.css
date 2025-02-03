@@ -5,8 +5,8 @@
 .animatedLinkPill {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 10px;
     width: calc(100% + 25px);
     height: fit-content;
     padding: 5px;
@@ -54,4 +54,16 @@
 
 .animatedLinkPillArrowContainer {
     min-width: fit-content;
+}
+
+.animatedLinkPillIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.animatedLinkPillIcon {
+    width: 24px;
+    height: 24px;
 }

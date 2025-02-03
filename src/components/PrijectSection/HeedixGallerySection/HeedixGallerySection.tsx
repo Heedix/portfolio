@@ -65,8 +65,8 @@ export default function HeedixGallerySection() {
                 </div>
             </div>
             <div className="heedixGallerySectionLinks">
-                <AnimatedLinkPill text={'Live Demo'} link={'https://heedix.de'}/>
-                <AnimatedLinkPill text={'GitHub'} link={'https://github.com/Heedix/heedix-gallery/'}/>
+                <AnimatedLinkPill text={'Live Demo'} link={'https://heedix.de'} icon={'messenger'}/>
+                <AnimatedLinkPill text={'GitHub'} link={'https://github.com/Heedix/heedix-gallery/'} icon={'github'}/>
             </div>
         </div>
     )

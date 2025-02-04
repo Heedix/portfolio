@@ -11,7 +11,7 @@ export default function AnimatedLinkPill({text, link, icon}: AnimatedLinkPillPro
     const [textState] = useState(text);
     const [linkState] = useState(link);
     const [iconState] = useState(icon);
-    const [iconSrc, setIconSrc] = useState('');
+    const [iconSrc, setIconSrc] = useState(iconState);
 
     useEffect(() => {
         switch (iconState) {

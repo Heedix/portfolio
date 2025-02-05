@@ -50,6 +50,7 @@ export default function HeedixGallerySection() {
                     />
                 </div>
             </div>
+            <hr className="divider" />
             <div className="heedixGallerySectionTechnologiesUsed">
                 <h2 className="heedixGallerySectionTechnologiesUsedHeader">Technologies Used:</h2>
                 <div className="pillsContainer">

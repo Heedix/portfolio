@@ -97,11 +97,11 @@ hr {
     overflow: hidden;
 }
 
-.nameContainer:hover .nameUnderlineLeft {
+.nameContainer:hover::before {
     animation: text-underline-left-animation 0.5s forwards;
 }
 
-.nameContainer:hover .nameUnderlineRight {
+.nameContainer:hover::after {
     animation: text-underline-right-animation 0.3s forwards 0.2s;
 }
 
@@ -110,7 +110,7 @@ hr {
     margin: 0;
 }
 
-.nameUnderlineLeft {
+.nameContainer::before {
     position: absolute;
     width: 78%;
     height: 2px;
@@ -118,9 +118,10 @@ hr {
     bottom: 10%;
     left: 0;
     transform: translateX(-101%);
+    content: '';
 }
 
-.nameUnderlineRight {
+.nameContainer::after {
     position: absolute;
     width: 13.5%;
     height: 2px;
@@ -128,14 +129,19 @@ hr {
     bottom: 10%;
     right: 0;
     transform: translateX(110%);
+    content: '';
 }
 
 .profileDescription {
     color: var(--subtle-font-color);
 }
 
+.divider {
+    margin: 0;
+}
+
 .rowDivider {
-    width: calc(100% - 50px);
+    width: 100%;
     grid-column: span var(--max-row-span);
     margin: 0 25px;
 }

@@ -25,8 +25,6 @@ export default function LandingPageInfo() {
                         <h2 className="hiThere">Hi there! 👋 I'm</h2>
                         <div className="nameContainer">
                             <h2 className="name">Jannis Austgen</h2>
-                            <div className="nameUnderlineLeft"></div>
-                            <div className="nameUnderlineRight"></div>
                         </div>
                     </div>
                     <p className="profileDescription">🎓 Computer Science Student passionate about building innovative and efficient software solutions.</p>

@@ -2,17 +2,21 @@ import './LandingPageInfo.css'
 //import profilePicture from '../../assets/profile-picture.jpg';
 import kachow from '../../assets/kachow.png';
 import Pill from "../Pill/Pill.tsx";
+import SocialIcons from "../SocialIcons/SocialIcons.tsx";
 
 export default function LandingPageInfo() {
 
     return (
         <>
             <div className="landingPageInfo">
-                <div className="profilePictureContainerWrapper">
-                    <div className="profilePictureContainer">
-                        <img src="src/assets/profile-picture.jpg" alt="profile-picture" className="profilePicture"></img>
-                        <img src={kachow} alt="kachow" className="kachow"></img>
+                <div className="socialIconsAndProfileContainer">
+                    <div className="profilePictureContainerWrapper">
+                        <div className="profilePictureContainer">
+                            <img src="src/assets/profile-picture.jpg" alt="profile-picture" className="profilePicture"></img>
+                            <img src={kachow} alt="kachow" className="kachow"></img>
+                        </div>
                     </div>
+                    <SocialIcons />
                 </div>
                 <div className="profileInfoContainer">
                     <h1 className="profileHeader">Portfolio</h1>
@@ -76,7 +80,7 @@ export default function LandingPageInfo() {
                     <div className="currentFocusLearnMoreContainer">
                         <p className="currentFocusLearnMore">Learn more</p>
                         <svg className="learnMoreArrowsSvg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="learnMoreArrowContainer" clip-path="url(#clip0_79_2)">
+                            <g id="learnMoreArrowContainer" clipPath="url(#clip0_79_2)">
                                 <path id="arrow1" d="M31.208 38.97a1 1 0 0 0 1.584 0L58.473 5.61A1 1 0 0 0 57.681 4H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>
                                 <path id="arrow2" d="M31.208 38.97a1 1 0 0 0 1.584 0L58.473 5.61A1 1 0 0 0 57.681 4H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>
                                 <path id="arrow3" d="M31.208 59.97a1 1 0 0 0 1.584 0l25.681-33.36a1 1 0 0 0-.792-1.61H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>

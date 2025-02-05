@@ -1,0 +1,25 @@
+.socialIcons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.socialIconContainer {
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+
+@media (pointer: coarse) {
+    .socialIconContainer {
+        width: 32px;
+        margin: 3px;
+    }
+}
+
+@media (pointer: fine) {
+    .socialIconContainer:hover {
+        width: 32px;
+        margin: 0 5px 0 11px;
+    }
+}

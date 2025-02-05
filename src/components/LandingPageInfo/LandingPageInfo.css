@@ -14,12 +14,22 @@ hr {
     padding-bottom: 25px;
 }
 
+.socialIconsAndProfileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 50px 50px 0 50px;
+}
+
 .profilePictureContainerWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 348px;
-    height: 348px;
+    flex-direction: column;
+    width: 277px;
+    height: 277px;
     margin: auto;
 }
 
@@ -216,10 +226,9 @@ hr {
     .landingPageInfo {
         grid-template-columns: auto;
     }
-    .profilePictureContainer {
-        margin: 50px auto;
+    .socialIconsAndProfileContainer {
+        margin: auto;
     }
-
     .profileHeader,
     .profileDescription,
     .greeting {
@@ -248,9 +257,6 @@ hr {
     }
     .landingPageInfo {
         grid-template-columns: auto;
-    }
-    .profilePictureContainer {
-        margin: 50px auto;
     }
     .profileHeader,
     .profileDescription,

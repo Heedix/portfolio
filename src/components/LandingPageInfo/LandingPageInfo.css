@@ -141,7 +141,7 @@ hr {
 }
 
 .rowDivider {
-    width: 100%;
+    width: calc(100% - 50px);
     grid-column: span var(--max-row-span);
     margin: 0 25px;
 }

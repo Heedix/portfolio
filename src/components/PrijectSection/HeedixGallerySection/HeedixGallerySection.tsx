@@ -56,11 +56,13 @@ export default function HeedixGallerySection() {
                 <div className="pillsContainer">
                     <Pill text={'Angular'}></Pill>
                     <Pill text={'TypeScript'}></Pill>
+                    <Pill text={'Node.js'}></Pill>
                     <Pill text={'Express.js'}></Pill>
                     <Pill text={'JavaScript'}></Pill>
                     <Pill text={'PostgreSQL'}></Pill>
                     <Pill text={'Figma'}></Pill>
                     <Pill text={'Git'}></Pill>
+                    <Pill text={'Nginx'}></Pill>
                     <Pill text={'GitHub Actions'}></Pill>
                     <Pill text={'Docker'}></Pill>
                 </div>

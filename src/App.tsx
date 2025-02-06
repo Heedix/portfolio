@@ -1,7 +1,7 @@
 import './App.css'
 import LandingPageInfo from './components/LandingPageInfo/LandingPageInfo.tsx'
 import Navbar from "./components/Navbar/Navbar.tsx";
-import ProjectSection from "./components/PrijectSection/ProjectSection.tsx";
+import ProjectSection from "./components/ProjectSection/ProjectSection.tsx";
 
 function App() {
 

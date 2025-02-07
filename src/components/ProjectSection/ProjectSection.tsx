@@ -21,7 +21,7 @@ export default function ProjectSection() {
                 The color scheme is kept simple to maintain clarity and ensure that the content remains the primary focus.\n
                 The layout is fully responsive and intuitive, allowing visitors to seamlessly navigate and explore my projects on any device.`}
                 designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
-                technologiesUsed={['React', 'TypeScript', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker']}
+                technologiesUsed={['React', 'TypeScript', 'Node.js', 'Vite', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
                     {text: 'Website', link: 'https://heedix.de/', icon: 'website'},
                     {text: 'GitHub', link: 'https://github.com/Heedix/portfolio/', icon: 'github'},
@@ -44,13 +44,33 @@ export default function ProjectSection() {
                     The color scheme is kept simple to ensure that the images are the main focus.\n
                     The layout is designed to be responsive and intuitive, allowing users to easily navigate the website and view images on any device.`}
                 designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
-                technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker']}
+                technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
                     {text: 'Live Demo', link: 'https://gallery.heedix.de/', icon: 'website'},
                     {text: 'GitHub', link: 'https://github.com/Heedix/heedix-gallery/', icon: 'github'}
                 ]}
                 direction={'left'}
                 leftUnderlineWidth={92}
+            />
+
+            <SingleProjectSection
+                title={'Filmverleih'}
+                subtitle={'Movie rental service'}
+                description={`
+                    This is a Java-based desktop application for managing a movie rental service built as part of a university project in "Programmieren 3".\n
+                    It features a user-friendly interface that allows workers to rent out and return movies, manage customer accounts, and track inventory.\n
+                    In addition, the application includes a way to add, edit, and delete movies from the database.\n
+                    The application is built using JavaFX for the frontend and Hibernate for the backend.\n`}
+                previewVideoSrc={''}
+                designDescription={`
+                `}
+                designPreview={{source: '', type: ''}}
+                technologiesUsed={['Java', 'Maven', 'JavaFx', 'Hibernate', 'PostgreSQL', 'Git']}
+                links={[
+                    {text: 'GitHub', link: 'https://github.com/MarcOhneMarc/prog3-Filmverleih/', icon: 'github'}
+                ]}
+                direction={'right'}
+                leftUnderlineWidth={100}
             />
         </div>
     )
@@ -120,11 +140,9 @@ function SingleProjectSection({
                     </div>
                     <hr/>
                     <h2 className="singleProjectSectionRow1Subtitle margin25lr">{subtitle}</h2>
-                    <p className="singleProjectSectionRow1Description margin25lr">
-                        {description.split('\n').map((line) => (
-                            <div>{line}</div>
-                        ))}
-                    </p>
+                    {description.split('\n').map((line, index) => (
+                        <p key={index} className="singleProjectSectionRow1Description margin25lr">{line}</p>
+                    ))}
                 </div>
                 {direction === 'left' ? (<div className="singleProjectSectionRow1VideoContainer">
                     <video
@@ -144,11 +162,9 @@ function SingleProjectSection({
                 {direction === 'right' ? <div className="singleProjectSectionRow2Column1">
                     <h2 className="singleProjectSectionRow2Header margin25lr">Design</h2>
                     <hr/>
-                    <p className="singleProjectSectionRow2Description margin25lr">
-                        {designDescription.split('\n').map((line) => (
-                            <div>{line}</div>
-                        ))}
-                    </p>
+                    {designDescription.split('\n').map((line, index) => (
+                        <p key={index} className="singleProjectSectionRow2Description margin25lr">{line}</p>
+                    ))}
                 </div> : null}
                 <div className="singleProjectSectionRow2Column2">
                     {designPreview.type === 'video' ? (
@@ -171,25 +187,23 @@ function SingleProjectSection({
                 {direction === 'left' ? <div className="singleProjectSectionRow2Column1">
                     <h2 className="singleProjectSectionRow2Header margin25lr">Design</h2>
                     <hr/>
-                    <p className="singleProjectSectionRow2Description margin25lr">
-                        {designDescription.split('\n').map((line) => (
-                            <div>{line}</div>
-                        ))}
-                    </p>
+                    {designDescription.split('\n').map((line, index) => (
+                        <p key={index} className="singleProjectSectionRow2Description margin25lr">{line}</p>
+                    ))}
                 </div> : null}
             </div>
             <hr className="divider"/>
             <div className="singleProjectSectionTechnologiesUsed">
                 <h2 className="singleProjectSectionTechnologiesUsedHeader">Technologies Used:</h2>
                 <div className="pillsContainer">
-                    {technologiesUsed.map((technology) => (
-                        <Pill text={technology}/>
+                    {technologiesUsed.map((technology, index) => (
+                        <Pill key={index} text={technology}/>
                     ))}
                 </div>
             </div>
             <div className="singleProjectSectionLinks">
-                {links.map((link) => (
-                    <AnimatedLinkPill text={link.text} link={link.link} icon={link.icon}/>
+                {links.map((link, index) => (
+                    <AnimatedLinkPill key={index} text={link.text} link={link.link} icon={link.icon}/>
                 ))}
             </div>
         </div>

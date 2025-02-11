@@ -11,15 +11,15 @@ export default function ProjectSection() {
                 title={'Portfolio'}
                 subtitle={'My portfolio page'}
                 description={`
-                This is my personal portfolio website, built with React 18.\n
-                It serves as a central platform to showcase my projects, skills, and experience in software development.\n
-                The site features an interactive user interface and modern UI/UX design.\n
-                All components of this web application are built and deployed using GitHub Actions with Docker on a VPS.`}
+                    This is my personal portfolio website, built with React 18.\n
+                    It serves as a central platform to showcase my projects, skills, and experience in software development.\n
+                    The site features an interactive user interface and modern UI/UX design.\n
+                    All components of this web application are built and deployed using GitHub Actions with Docker on a VPS.`}
                 previewVideoSrc={'src/assets/heedix-gallery-preview.mp4'}
                 designDescription={`
-                The design of my portfolio website follows a minimalistic and clean aesthetic, inspired by modern web development standards.\n
-                The color scheme is kept simple to maintain clarity and ensure that the content remains the primary focus.\n
-                The layout is fully responsive and intuitive, allowing visitors to seamlessly navigate and explore my projects on any device.`}
+                    The design of my portfolio website follows a minimalistic and clean aesthetic, inspired by modern web development standards.\n
+                    The color scheme is kept simple to maintain clarity and ensure that the content remains the primary focus.\n
+                    The layout is fully responsive and intuitive, allowing visitors to seamlessly navigate and explore my projects on any device.`}
                 designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
                 technologiesUsed={['React', 'TypeScript', 'Node.js', 'Vite', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
@@ -63,7 +63,10 @@ export default function ProjectSection() {
                     The application is built using JavaFX for the frontend and Hibernate for the backend.\n`}
                 previewVideoSrc={''}
                 designDescription={`
-                `}
+                    The design of Quantum Vortex is inspired by the aesthetics of digital movie rental platforms, featuring a dark-themed interface that enhances the visibility of movie covers and information.\n
+                    The color scheme combines black and dark gray with bright yellow highlights, ensuring clear navigation elements while maintaining a modern and cinematic look.\n
+                    The layout is structured for functionality, with distinct sections for login, movie browsing, and rental management.
+                     It follows an intuitive design, allowing users to seamlessly search, view, and manage movies. The use of high-contrast buttons and structured grids ensures an efficient and user-friendly experience.\n`}
                 designPreview={{source: '', type: ''}}
                 technologiesUsed={['Java', 'Maven', 'JavaFx', 'Hibernate', 'PostgreSQL', 'Git']}
                 links={[

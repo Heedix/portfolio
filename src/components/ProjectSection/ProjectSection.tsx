@@ -73,7 +73,7 @@ export default function ProjectSection() {
                 direction={'right'}
             />
 
-            <SingleProjectSection title={'abcgde'} subtitle={''} description={''} previewVideoSrc={''} designDescription={''} designPreview={{source: '', type: ''}} technologiesUsed={[]} links={[]} direction={'right'}/>
+            <SingleProjectSection title={'abcgde'} subtitle={''} description={''} previewVideoSrc={''} designDescription={''} designPreview={{source: '', type: ''}} technologiesUsed={[]} links={[]} direction={'right'}/> {/*//TODO remove*/}
         </div>
     )
 }

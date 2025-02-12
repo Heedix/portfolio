@@ -1,0 +1,25 @@
+# Step 1: Build Angular App
+FROM node:18-alpine AS build
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build
+
+# Step 2: Nginx für den Webserver
+FROM nginx:alpine
+
+# Kopiere den Build-Output von Angular in das Verzeichnis, das Nginx bedient
+COPY --from=build /app/dist/ /usr/share/nginx/html
+
+# Kopiere die Nginx-Konfigurationsdatei
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]

@@ -59,15 +59,16 @@ hr {
     height: 5px;
     background-color: var(--font-color);
     bottom: 5%;
-    left: 0;
 }
 
 .singleProjectSectionRow1HeaderUnderlineLeft {
     transform: translateX(-101%);
+    left: 0;
 }
 
 .singleProjectSectionRow1HeaderUnderlineRight {
     transform: translateX(101%);
+    right: 0;
 }
 
 .singleProjectSectionRow1HeaderContainer:hover .singleProjectSectionRow1HeaderUnderlineLeft {

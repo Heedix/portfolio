@@ -27,7 +27,6 @@ export default function ProjectSection() {
                     {text: 'GitHub', link: 'https://github.com/Heedix/portfolio/', icon: 'github'},
                 ]}
                 direction={'right'}
-                leftUnderlineWidth={100}
             />
 
             <SingleProjectSection
@@ -44,13 +43,12 @@ export default function ProjectSection() {
                     The color scheme is kept simple to ensure that the images are the main focus.\n
                     The layout is designed to be responsive and intuitive, allowing users to easily navigate the website and view images on any device.`}
                 designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
-                technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
+                technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ']}
                 links={[
                     {text: 'Live Demo', link: 'https://gallery.heedix.de/', icon: 'website'},
                     {text: 'GitHub', link: 'https://github.com/Heedix/heedix-gallery/', icon: 'github'}
                 ]}
                 direction={'left'}
-                leftUnderlineWidth={92}
             />
 
             <SingleProjectSection
@@ -73,8 +71,9 @@ export default function ProjectSection() {
                     {text: 'GitHub', link: 'https://github.com/MarcOhneMarc/prog3-Filmverleih/', icon: 'github'}
                 ]}
                 direction={'right'}
-                leftUnderlineWidth={100}
             />
+
+            <SingleProjectSection title={'abcgde'} subtitle={''} description={''} previewVideoSrc={''} designDescription={''} designPreview={{source: '', type: ''}} technologiesUsed={[]} links={[]} direction={'right'}/>
         </div>
     )
 }
@@ -102,10 +101,12 @@ function SingleProjectSection({
                                   designPreview,
                                   technologiesUsed,
                                   links,
-                                  direction,
-                                  leftUnderlineWidth,
-                                  rightUnderlineWidth
+                                  direction
                               }: SingleProjectSectionProps) {
+
+    const [leftUnderlineWidthState, setLeftUnderlineWidthState] = useState(0);
+    const [rightUnderlineWidthState, setRightUnderlineWidthState] = useState(0);
+    const [titleState] = useState(title);
 
     const [isScreenSmaller1200, setIsScreenSmaller1200] = useState(window.innerWidth < 1200);
 
@@ -114,6 +115,39 @@ function SingleProjectSection({
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    useEffect(() => {
+        let longCharPosition;
+        for (let i = 0; i < titleState.length; i++) {
+            const char = titleState.charAt(i);
+            switch (char) {
+                case 'g':
+                case 'j':
+                case 'p':
+                case 'q':
+                case 'y':
+                case 'Q':
+                    longCharPosition = i;
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (longCharPosition) {
+            if (longCharPosition !== 0) {
+                setLeftUnderlineWidthState(100 * (longCharPosition) / title.length);
+            } else {
+                setLeftUnderlineWidthState(0);
+            }
+            if (longCharPosition !== title.length - 1) {
+                setRightUnderlineWidthState(100 * (title.length - longCharPosition -1) / title.length);
+            } else {
+                setRightUnderlineWidthState(0);
+            }
+        } else {
+            setLeftUnderlineWidthState(100);
+        }
+    }, [title]);
 
     return (
         <div className="singleProjectSection">
@@ -136,10 +170,10 @@ function SingleProjectSection({
                         <h1 className="singleProjectSectionRow1Header">{title}</h1>
                         <div
                             className="singleProjectSectionRow1HeaderUnderline singleProjectSectionRow1HeaderUnderlineLeft"
-                            style={leftUnderlineWidth ? {width: leftUnderlineWidth + '%'} : {width: 0}}/>
+                            style={leftUnderlineWidthState ? {width: leftUnderlineWidthState + '%'} : {width: 0}}/>
                         <div
                             className="singleProjectSectionRow1HeaderUnderline singleProjectSectionRow1HeaderUnderlineRight"
-                            style={rightUnderlineWidth ? {width: rightUnderlineWidth + '%'} : {width: 0}}/>
+                            style={rightUnderlineWidthState ? {width: rightUnderlineWidthState + '%'} : {width: 0}}/>
                     </div>
                     <hr/>
                     <h2 className="singleProjectSectionRow1Subtitle margin25lr">{subtitle}</h2>

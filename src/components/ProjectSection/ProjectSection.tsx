@@ -43,7 +43,7 @@ export default function ProjectSection() {
                     The color scheme is kept simple to ensure that the images are the main focus.\n
                     The layout is designed to be responsive and intuitive, allowing users to easily navigate the website and view images on any device.`}
                 designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
-                technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ']}
+                technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
                     {text: 'Live Demo', link: 'https://gallery.heedix.de/', icon: 'website'},
                     {text: 'GitHub', link: 'https://github.com/Heedix/heedix-gallery/', icon: 'github'}
@@ -119,8 +119,7 @@ function SingleProjectSection({
     useEffect(() => {
         let longCharPosition;
         for (let i = 0; i < titleState.length; i++) {
-            const char = titleState.charAt(i);
-            switch (char) {
+            switch (titleState.charAt(i)) {
                 case 'g':
                 case 'j':
                 case 'p':
@@ -147,7 +146,7 @@ function SingleProjectSection({
         } else {
             setLeftUnderlineWidthState(100);
         }
-    }, [title]);
+    }, [titleState]);
 
     return (
         <div className="singleProjectSection">

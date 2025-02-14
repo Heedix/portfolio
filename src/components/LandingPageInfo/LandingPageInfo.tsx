@@ -6,9 +6,13 @@ import SocialIcons from "../SocialIcons/SocialIcons.tsx";
 
 export default function LandingPageInfo() {
 
+    function scrollToId(id: string) {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
         <>
-            <div className="landingPageInfo">
+            <div className="landingPageInfo" id="aboutSection">
                 <div className="socialIconsAndProfileContainer">
                     <div className="profilePictureContainerWrapper">
                         <div className="profilePictureContainer">
@@ -77,7 +81,7 @@ export default function LandingPageInfo() {
                     </p>
                     <div className="currentFocusLearnMoreContainer">
                         <p className="currentFocusLearnMore">Learn more</p>
-                        <svg className="learnMoreArrowsSvg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="learnMoreArrowsSvg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => scrollToId('currentFocus')}>
                             <g id="learnMoreArrowContainer" clipPath="url(#clip0_79_2)">
                                 <path id="arrow1" d="M31.208 38.97a1 1 0 0 0 1.584 0L58.473 5.61A1 1 0 0 0 57.681 4H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>
                                 <path id="arrow2" d="M31.208 38.97a1 1 0 0 0 1.584 0L58.473 5.61A1 1 0 0 0 57.681 4H6.319a1 1 0 0 0-.792 1.61l25.68 33.36Z"/>

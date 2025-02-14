@@ -54,6 +54,10 @@
     animation: text-underline-right-animation 0.5s forwards;
 }
 
+.navbarItem:hover {
+    cursor: pointer;
+}
+
 .underline {
     position: absolute;
     width: 100%;

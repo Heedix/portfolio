@@ -6,8 +6,9 @@ import {useEffect, useState} from "react";
 export default function ProjectSection() {
 
     return (
-        <div className="projectSection">
+        <div className="projectSection" id="projectSection">
             <SingleProjectSection
+                id={'currentFocus'}
                 title={'Portfolio'}
                 subtitle={'My portfolio page'}
                 description={`
@@ -79,6 +80,7 @@ export default function ProjectSection() {
 }
 
 interface SingleProjectSectionProps {
+    id?: string;
     title: string;
     subtitle: string;
     description: string;
@@ -93,6 +95,7 @@ interface SingleProjectSectionProps {
 }
 
 function SingleProjectSection({
+                                  id,
                                   title,
                                   subtitle,
                                   description,
@@ -149,7 +152,8 @@ function SingleProjectSection({
     }, [titleState]);
 
     return (
-        <div className="singleProjectSection">
+        <div className="singleProjectSection"
+             id={id}>
             <div className="singleProjectSectionRow1" style={
                 isScreenSmaller1200 && direction === 'right' ? {flexDirection: 'column-reverse'} : isScreenSmaller1200 && direction === 'left' ? {flexDirection: 'column'} :
                 direction === 'left' ? {gridTemplateColumns: '2fr 3fr'} : {gridTemplateColumns: '3fr 2fr'}

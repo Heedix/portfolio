@@ -35,6 +35,10 @@ export default function Navbar() {
         setIsNavbarOpen(!isNavbarOpen);
     }
 
+    function scrollToId(id: string) {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
         <>
             <div className="navbarContainer" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
@@ -51,16 +55,16 @@ export default function Navbar() {
                          animation: isNavbarOpen ? "navbar-animation 0.5s forwards" : "navbar-animation 0.5s reverse"
                      }}>
                     <div className="navbarAboutContainer">
-                        <a href="#about" className="navItem"><h3>About</h3></a>
+                        <h3 className="navbarItem" onClick={() => scrollToId('aboutSection')}>About</h3>
                         <div className="navbarAboutUnderline underline"></div>
                     </div>
                     <div className="navbarProjectsContainer">
-                        <a href="#projects" className="navItem"><h3>Projects</h3></a>
+                        <h3 className="navbarItem" onClick={() => scrollToId('projectSection')}>Projects</h3>
                         <div className="navbarProjectsUnderlineLeft underline"></div>
                         <div className="navbarProjectsUnderlineRight underline"></div>
                     </div>
                     <div className="navbarContactContainer">
-                        <a href="#contact" className="navItem"><h3>Contact</h3></a>
+                        <h3 className="navbarItem" onClick={() => scrollToId('contactSection')}>Contact</h3>
                         <div className="navbarContactUnderline underline"></div>
                     </div>
                 </div>

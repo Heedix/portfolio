@@ -73,8 +73,6 @@ export default function ProjectSection() {
                 ]}
                 direction={'right'}
             />
-
-            <SingleProjectSection title={'abcgde'} subtitle={''} description={''} previewVideoSrc={''} designDescription={''} designPreview={{source: '', type: ''}} technologiesUsed={[]} links={[]} direction={'right'}/> {/*//TODO remove*/}
         </div>
     )
 }
@@ -121,28 +119,53 @@ function SingleProjectSection({
 
     useEffect(() => {
         let longCharPosition;
+        let leftSubtraction = 0;
+        let rightSubtraction = 0;
         for (let i = 0; i < titleState.length; i++) {
             switch (titleState.charAt(i)) {
                 case 'g':
+                    leftSubtraction = (1 / titleState.length * 10);
+                    rightSubtraction = (1 / titleState.length * 10);
+                    longCharPosition = i;
+                    break;
                 case 'j':
+                    leftSubtraction = (1 / titleState.length * 10);
+                    rightSubtraction = -(1 / titleState.length * 5);
+                    longCharPosition = i;
+                    break;
                 case 'p':
+                    leftSubtraction = (1 / titleState.length * 10);
+                    rightSubtraction = -(1 / titleState.length * 45);
+                    longCharPosition = i;
+                    break;
                 case 'q':
+                    leftSubtraction = -(1 / titleState.length * 45);
+                    rightSubtraction = (1 / titleState.length * 10);
+                    longCharPosition = i;
+                    break;
                 case 'y':
+                    leftSubtraction = (1 / titleState.length * 5);
+                    rightSubtraction = -(1 / titleState.length * 30);
+                    longCharPosition = i;
+                    break;
                 case 'Q':
+                    leftSubtraction = -(1 / titleState.length * 20);
+                    rightSubtraction = (1 / titleState.length * 5);
                     longCharPosition = i;
                     break;
                 default:
                     break;
+
             }
         }
         if (longCharPosition) {
             if (longCharPosition !== 0) {
-                setLeftUnderlineWidthState(100 * (longCharPosition) / title.length);
+                setLeftUnderlineWidthState((100 * (longCharPosition) / titleState.length) - leftSubtraction);
             } else {
                 setLeftUnderlineWidthState(0);
             }
-            if (longCharPosition !== title.length - 1) {
-                setRightUnderlineWidthState(100 * (title.length - longCharPosition -1) / title.length);
+            if (longCharPosition !== titleState.length - 1) {
+                setRightUnderlineWidthState((100 * (titleState.length - longCharPosition -1) / titleState.length) - rightSubtraction);
             } else {
                 setRightUnderlineWidthState(0);
             }
@@ -159,14 +182,14 @@ function SingleProjectSection({
                 direction === 'left' ? {gridTemplateColumns: '2fr 3fr'} : {gridTemplateColumns: '3fr 2fr'}
             }>
                 {direction === 'right' ? (<div className="singleProjectSectionRow1VideoContainer">
-                    <video
+                    {previewVideoSrc ? (<video
                         src={previewVideoSrc}
                         muted
                         loop
                         className="singleProjectSectionRow1Video"
                         onMouseOver={e => e.currentTarget.play()}
                         onMouseOut={e => e.currentTarget.pause()}
-                    />
+                    />) : null}
                 </div>) : null}
                 <div className="singleProjectSectionRow1Column2">
                     <div className="singleProjectSectionRow1HeaderContainer margin25lr">
@@ -185,14 +208,14 @@ function SingleProjectSection({
                     ))}
                 </div>
                 {direction === 'left' ? (<div className="singleProjectSectionRow1VideoContainer">
-                    <video
+                    {previewVideoSrc ? (<video
                         src={previewVideoSrc}
                         muted
                         loop
                         className="singleProjectSectionRow1Video"
                         onMouseOver={e => e.currentTarget.play()}
                         onMouseOut={e => e.currentTarget.pause()}
-                    />
+                    />) : null}
                 </div>) : null}
             </div>
             <div className="singleProjectSectionRow2" style={
@@ -208,14 +231,14 @@ function SingleProjectSection({
                 </div> : null}
                 <div className="singleProjectSectionRow2Column2">
                     {designPreview.type === 'video' ? (
-                        <video
+                        previewVideoSrc ? (<video
                             src={designPreview.source}
                             muted
                             loop
                             className="singleProjectSectionRow2Video"
                             onMouseOver={e => e.currentTarget.play()}
                             onMouseOut={e => e.currentTarget.pause()}
-                        />
+                        />) : null
                     ) : designPreview.type === 'image' ? (
                         <img
                             src={designPreview.source}

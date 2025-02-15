@@ -1,6 +1,20 @@
 import './AnimatedLinkPill.css'
 import {useEffect, useState} from "react";
 
+import websiteIcon from '../../assets/icons/website.png';
+import messengerIcon from '../../assets/icons/messenger.svg';
+import githubIcon from '../../assets/icons/github.svg';
+import linkedinIcon from '../../assets/icons/linkedin.svg';
+import youtubeIcon from '../../assets/icons/youtube.svg';
+import instagramIcon from '../../assets/icons/instagram.svg';
+import twitterIcon from '../../assets/icons/x.svg';
+import facebookIcon from '../../assets/icons/facebook.svg';
+import redditIcon from '../../assets/icons/reddit.svg';
+import twitchIcon from '../../assets/icons/twitch.svg';
+import discordIcon from '../../assets/icons/discord.svg';
+import spotifyIcon from '../../assets/icons/spotify.svg';
+import tiktokIcon from '../../assets/icons/tiktok.svg';
+
 interface AnimatedLinkPillProps {
     text: string;
     link: string;
@@ -16,43 +30,43 @@ export default function AnimatedLinkPill({text, link, icon}: AnimatedLinkPillPro
     useEffect(() => {
         switch (iconState) {
             case 'website':
-                setIconSrc('src/assets/icons/website.png');
+                setIconSrc(websiteIcon);
                 break;
             case 'messenger':
-                setIconSrc('src/assets/icons/messenger.svg');
+                setIconSrc(messengerIcon);
                 break;
             case 'github':
-                setIconSrc('src/assets/icons/github.svg');
+                setIconSrc(githubIcon);
                 break;
             case 'linkedin':
-                setIconSrc('src/assets/icons/linkedin.svg');
+                setIconSrc(linkedinIcon);
                 break;
             case 'youtube':
-                setIconSrc('src/assets/icons/youtube.svg');
+                setIconSrc(youtubeIcon);
                 break;
             case 'instagram':
-                setIconSrc('src/assets/icons/instagram.svg');
+                setIconSrc(instagramIcon);
                 break;
             case 'twitter':
-                setIconSrc('src/assets/icons/x.svg');
+                setIconSrc(twitterIcon);
                 break;
             case 'facebook':
-                setIconSrc('src/assets/icons/facebook.svg');
+                setIconSrc(facebookIcon);
                 break;
             case 'reddit':
-                setIconSrc('src/assets/icons/reddit.svg');
+                setIconSrc(redditIcon);
                 break;
             case 'twitch':
-                setIconSrc('src/assets/icons/twitch.svg');
+                setIconSrc(twitchIcon);
                 break;
             case 'discord':
-                setIconSrc('src/assets/icons/discord.svg');
+                setIconSrc(discordIcon);
                 break;
             case 'spotify':
-                setIconSrc('src/assets/icons/spotify.svg');
+                setIconSrc(spotifyIcon);
                 break;
             case 'tiktok':
-                setIconSrc('src/assets/icons/tiktok.svg');
+                setIconSrc(tiktokIcon);
                 break;
         }
     }, [iconState]);

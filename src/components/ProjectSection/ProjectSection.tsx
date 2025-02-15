@@ -4,7 +4,6 @@ import AnimatedLinkPill from "../AnimatedLinkPill/AnimatedLinkPill.tsx";
 import {useEffect, useState} from "react";
 
 export default function ProjectSection() {
-
     return (
         <div className="projectSection" id="projectSection">
             <SingleProjectSection
@@ -16,12 +15,12 @@ export default function ProjectSection() {
                     It serves as a central platform to showcase my projects, skills, and experience in software development.\n
                     The site features an interactive user interface and modern UI/UX design.\n
                     All components of this web application are built and deployed using GitHub Actions with Docker on a VPS.`}
-                previewVideoSrc={'src/assets/heedix-gallery-preview.mp4'}
+                previewVideoSrc={'/assets/heedix-gallery-preview.mp4'}
                 designDescription={`
                     The design of my portfolio website follows a minimalistic and clean aesthetic, inspired by modern web development standards.\n
                     The color scheme is kept simple to maintain clarity and ensure that the content remains the primary focus.\n
                     The layout is fully responsive and intuitive, allowing visitors to seamlessly navigate and explore my projects on any device.`}
-                designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
+                designPreview={{source: '/assets/heedix-gallery-preview.mp4', type: 'video'}}
                 technologiesUsed={['React', 'TypeScript', 'Node.js', 'Vite', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
                     {text: 'Website', link: 'https://heedix.de/', icon: 'website'},
@@ -38,12 +37,12 @@ export default function ProjectSection() {
                     It is primarily focused on photography and includes features such as metadata extraction, allowing users to view details like the camera model, make, and settings used to capture the image.\n
                     The backend is powered by an Express.js-based REST API.\n
                     All components of this web application are built and deployed using GitHub Actions with Docker on a VPS.`}
-                previewVideoSrc={'src/assets/heedix-gallery-preview.mp4'}
+                previewVideoSrc={'/assets/heedix-gallery-preview.mp4'}
                 designDescription={`
                     The design of Heedix Gallery is inspired by the minimalistic and clean look of photography websites.\n
                     The color scheme is kept simple to ensure that the images are the main focus.\n
                     The layout is designed to be responsive and intuitive, allowing users to easily navigate the website and view images on any device.`}
-                designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
+                designPreview={{source: '/assets/heedix-gallery-preview.mp4', type: 'video'}}
                 technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
                     {text: 'Live Demo', link: 'https://gallery.heedix.de/', icon: 'website'},
@@ -104,7 +103,6 @@ function SingleProjectSection({
                                   links,
                                   direction
                               }: SingleProjectSectionProps) {
-
     const [leftUnderlineWidthState, setLeftUnderlineWidthState] = useState(0);
     const [rightUnderlineWidthState, setRightUnderlineWidthState] = useState(0);
     const [titleState] = useState(title);

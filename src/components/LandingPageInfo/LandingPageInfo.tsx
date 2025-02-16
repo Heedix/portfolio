@@ -54,6 +54,7 @@ export default function LandingPageInfo() {
                     <h2 className="frameworksHeader">🖼️Frameworks:</h2>
                     <div className="pillsContainer">
                         <Pill text={'AngularJS'}></Pill>
+                        <Pill text={'React'}></Pill>
                         <Pill text={'Express.js'}></Pill>
                         <Pill text={'Maven'}></Pill>
                         <Pill text={'Hibernate'}></Pill>

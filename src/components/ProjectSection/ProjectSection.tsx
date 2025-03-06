@@ -66,7 +66,7 @@ export default function ProjectSection() {
                     The layout is structured for functionality, with distinct sections for login, movie browsing, and rental management.
                      It follows an intuitive design, allowing users to seamlessly search, view, and manage movies. The use of high-contrast buttons and structured grids ensures an efficient and user-friendly experience.\n`}
                 designPreview={{source: '', type: ''}}
-                technologiesUsed={['Java', 'Maven', 'JavaFx', 'Hibernate', 'PostgreSQL', 'Git']}
+                technologiesUsed={['Java', 'Maven', 'JavaFx', 'Hibernate', 'PostgreSQL', 'Figma', 'Git']}
                 links={[
                     {text: 'GitHub', link: 'https://github.com/MarcOhneMarc/prog3-Filmverleih/', icon: 'github'}
                 ]}

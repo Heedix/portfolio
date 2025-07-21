@@ -1,5 +1,6 @@
 import './LandingPageInfo.css'
 //import profilePicture from '../../assets/profile-picture.jpg';
+import profilePicture from '../../assets/profile-picture.jpg';
 import kachow from '../../assets/kachow.png';
 import Pill from "../Pill/Pill.tsx";
 import SocialIcons from "../SocialIcons/SocialIcons.tsx";
@@ -16,7 +17,7 @@ export default function LandingPageInfo() {
                 <div className="socialIconsAndProfileContainer">
                     <div className="profilePictureContainerWrapper">
                         <div className="profilePictureContainer">
-                            <img src="src/assets/profile-picture.jpg" alt="profile-picture" className="profilePicture"></img>
+                            <img src={profilePicture} alt="profile-picture" className="profilePicture"></img>
                             <img src={kachow} alt="kachow" className="kachow"></img>
                         </div>
                     </div>
@@ -53,6 +54,9 @@ export default function LandingPageInfo() {
                     <h2 className="frameworksHeader">🖼️Frameworks:</h2>
                     <div className="pillsContainer">
                         <Pill text={'AngularJS'}></Pill>
+                        <Pill text={'React'}></Pill>
+                        <Pill text={'Ionic'}></Pill>
+                        <Pill text={'NestJS'}></Pill>
                         <Pill text={'Express.js'}></Pill>
                         <Pill text={'Maven'}></Pill>
                         <Pill text={'Hibernate'}></Pill>
@@ -70,6 +74,7 @@ export default function LandingPageInfo() {
                         <Pill text={'Docker'}></Pill>
                         <Pill text={'Github Actions'}></Pill>
                         <Pill text={'Figma'}></Pill>
+                        <Pill text={'Postman'}></Pill>
                     </div>
                 </div>
                 <hr className="rowDivider"/>

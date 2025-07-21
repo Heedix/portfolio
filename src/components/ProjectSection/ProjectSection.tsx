@@ -4,7 +4,6 @@ import AnimatedLinkPill from "../AnimatedLinkPill/AnimatedLinkPill.tsx";
 import {useEffect, useState} from "react";
 
 export default function ProjectSection() {
-
     return (
         <div className="projectSection" id="projectSection">
             <SingleProjectSection
@@ -16,12 +15,12 @@ export default function ProjectSection() {
                     It serves as a central platform to showcase my projects, skills, and experience in software development.\n
                     The site features an interactive user interface and modern UI/UX design.\n
                     All components of this web application are built and deployed using GitHub Actions with Docker on a VPS.`}
-                previewVideoSrc={'src/assets/heedix-gallery-preview.mp4'}
+                previewVideoSrc={'/assets/heedix-gallery-preview.mp4'}
                 designDescription={`
                     The design of my portfolio website follows a minimalistic and clean aesthetic, inspired by modern web development standards.\n
                     The color scheme is kept simple to maintain clarity and ensure that the content remains the primary focus.\n
                     The layout is fully responsive and intuitive, allowing visitors to seamlessly navigate and explore my projects on any device.`}
-                designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
+                designPreview={{source: '/assets/heedix-gallery-preview.mp4', type: 'video'}}
                 technologiesUsed={['React', 'TypeScript', 'Node.js', 'Vite', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
                     {text: 'Website', link: 'https://heedix.de/', icon: 'website'},
@@ -38,12 +37,12 @@ export default function ProjectSection() {
                     It is primarily focused on photography and includes features such as metadata extraction, allowing users to view details like the camera model, make, and settings used to capture the image.\n
                     The backend is powered by an Express.js-based REST API.\n
                     All components of this web application are built and deployed using GitHub Actions with Docker on a VPS.`}
-                previewVideoSrc={'src/assets/heedix-gallery-preview.mp4'}
+                previewVideoSrc={'/assets/heedix-gallery-preview.mp4'}
                 designDescription={`
                     The design of Heedix Gallery is inspired by the minimalistic and clean look of photography websites.\n
                     The color scheme is kept simple to ensure that the images are the main focus.\n
                     The layout is designed to be responsive and intuitive, allowing users to easily navigate the website and view images on any device.`}
-                designPreview={{source: 'src/assets/heedix-gallery-preview.mp4', type: 'video'}}
+                designPreview={{source: '/assets/heedix-gallery-preview.mp4', type: 'video'}}
                 technologiesUsed={['Angular', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript', 'PostgreSQL', 'Figma', 'Git', 'Nginx', 'GitHub Actions', 'Docker', 'Traefik']}
                 links={[
                     {text: 'Live Demo', link: 'https://gallery.heedix.de/', icon: 'website'},
@@ -67,14 +66,12 @@ export default function ProjectSection() {
                     The layout is structured for functionality, with distinct sections for login, movie browsing, and rental management.
                      It follows an intuitive design, allowing users to seamlessly search, view, and manage movies. The use of high-contrast buttons and structured grids ensures an efficient and user-friendly experience.\n`}
                 designPreview={{source: '', type: ''}}
-                technologiesUsed={['Java', 'Maven', 'JavaFx', 'Hibernate', 'PostgreSQL', 'Git']}
+                technologiesUsed={['Java', 'Maven', 'JavaFx', 'Hibernate', 'PostgreSQL', 'Figma', 'Git']}
                 links={[
                     {text: 'GitHub', link: 'https://github.com/MarcOhneMarc/prog3-Filmverleih/', icon: 'github'}
                 ]}
                 direction={'right'}
             />
-
-            <SingleProjectSection title={'abcgde'} subtitle={''} description={''} previewVideoSrc={''} designDescription={''} designPreview={{source: '', type: ''}} technologiesUsed={[]} links={[]} direction={'right'}/> {/*//TODO remove*/}
         </div>
     )
 }
@@ -106,7 +103,6 @@ function SingleProjectSection({
                                   links,
                                   direction
                               }: SingleProjectSectionProps) {
-
     const [leftUnderlineWidthState, setLeftUnderlineWidthState] = useState(0);
     const [rightUnderlineWidthState, setRightUnderlineWidthState] = useState(0);
     const [titleState] = useState(title);
@@ -121,28 +117,53 @@ function SingleProjectSection({
 
     useEffect(() => {
         let longCharPosition;
+        let leftSubtraction = 0;
+        let rightSubtraction = 0;
         for (let i = 0; i < titleState.length; i++) {
             switch (titleState.charAt(i)) {
                 case 'g':
+                    leftSubtraction = (1 / titleState.length * 10);
+                    rightSubtraction = (1 / titleState.length * 10);
+                    longCharPosition = i;
+                    break;
                 case 'j':
+                    leftSubtraction = (1 / titleState.length * 10);
+                    rightSubtraction = -(1 / titleState.length * 5);
+                    longCharPosition = i;
+                    break;
                 case 'p':
+                    leftSubtraction = (1 / titleState.length * 10);
+                    rightSubtraction = -(1 / titleState.length * 45);
+                    longCharPosition = i;
+                    break;
                 case 'q':
+                    leftSubtraction = -(1 / titleState.length * 45);
+                    rightSubtraction = (1 / titleState.length * 10);
+                    longCharPosition = i;
+                    break;
                 case 'y':
+                    leftSubtraction = (1 / titleState.length * 5);
+                    rightSubtraction = -(1 / titleState.length * 30);
+                    longCharPosition = i;
+                    break;
                 case 'Q':
+                    leftSubtraction = -(1 / titleState.length * 20);
+                    rightSubtraction = (1 / titleState.length * 5);
                     longCharPosition = i;
                     break;
                 default:
                     break;
+
             }
         }
         if (longCharPosition) {
             if (longCharPosition !== 0) {
-                setLeftUnderlineWidthState(100 * (longCharPosition) / title.length);
+                setLeftUnderlineWidthState((100 * (longCharPosition) / titleState.length) - leftSubtraction);
             } else {
                 setLeftUnderlineWidthState(0);
             }
-            if (longCharPosition !== title.length - 1) {
-                setRightUnderlineWidthState(100 * (title.length - longCharPosition -1) / title.length);
+            if (longCharPosition !== titleState.length - 1) {
+                setRightUnderlineWidthState((100 * (titleState.length - longCharPosition -1) / titleState.length) - rightSubtraction);
             } else {
                 setRightUnderlineWidthState(0);
             }
@@ -159,14 +180,14 @@ function SingleProjectSection({
                 direction === 'left' ? {gridTemplateColumns: '2fr 3fr'} : {gridTemplateColumns: '3fr 2fr'}
             }>
                 {direction === 'right' ? (<div className="singleProjectSectionRow1VideoContainer">
-                    <video
+                    {previewVideoSrc ? (<video
                         src={previewVideoSrc}
                         muted
                         loop
                         className="singleProjectSectionRow1Video"
                         onMouseOver={e => e.currentTarget.play()}
                         onMouseOut={e => e.currentTarget.pause()}
-                    />
+                    />) : null}
                 </div>) : null}
                 <div className="singleProjectSectionRow1Column2">
                     <div className="singleProjectSectionRow1HeaderContainer margin25lr">
@@ -185,14 +206,14 @@ function SingleProjectSection({
                     ))}
                 </div>
                 {direction === 'left' ? (<div className="singleProjectSectionRow1VideoContainer">
-                    <video
+                    {previewVideoSrc ? (<video
                         src={previewVideoSrc}
                         muted
                         loop
                         className="singleProjectSectionRow1Video"
                         onMouseOver={e => e.currentTarget.play()}
                         onMouseOut={e => e.currentTarget.pause()}
-                    />
+                    />) : null}
                 </div>) : null}
             </div>
             <div className="singleProjectSectionRow2" style={
@@ -208,14 +229,14 @@ function SingleProjectSection({
                 </div> : null}
                 <div className="singleProjectSectionRow2Column2">
                     {designPreview.type === 'video' ? (
-                        <video
+                        previewVideoSrc ? (<video
                             src={designPreview.source}
                             muted
                             loop
                             className="singleProjectSectionRow2Video"
                             onMouseOver={e => e.currentTarget.play()}
                             onMouseOut={e => e.currentTarget.pause()}
-                        />
+                        />) : null
                     ) : designPreview.type === 'image' ? (
                         <img
                             src={designPreview.source}

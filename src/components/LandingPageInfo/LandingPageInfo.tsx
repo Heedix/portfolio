@@ -76,8 +76,7 @@ export default function LandingPageInfo() {
                 <div className="currentFocusContainer, PFTCContainers">
                     <h2 className="currentFocusHeader">🔎Current Focus:</h2>
                     <p>
-                        Currently I'm focussing on building a website displaying my recent projects, <br/>
-                        while showcasing some of my web development skills.
+                        Currently I'm focussing on building a website displaying my recent projects, while showcasing some of my web development skills.
                     </p>
                     <div className="currentFocusLearnMoreContainer">
                         <p className="currentFocusLearnMore">Learn more</p>

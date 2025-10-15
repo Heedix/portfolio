@@ -41,6 +41,7 @@ export default function LandingPageInfo() {
                     <h2 className="programmingLanguagesHeader">⌨️Programming Languages:</h2>
                     <div className="pillsContainer">
                         <Pill text={'Java'}></Pill>
+                        <Pill text={'C#'}></Pill>
                         <Pill text={'TypeScript'}></Pill>
                         <Pill text={'JavaScript'}></Pill>
                         <Pill text={'C'}></Pill>
@@ -75,6 +76,7 @@ export default function LandingPageInfo() {
                         <Pill text={'Github Actions'}></Pill>
                         <Pill text={'Figma'}></Pill>
                         <Pill text={'Postman'}></Pill>
+                        <Pill text={'Google OR-Tools'}></Pill>
                     </div>
                 </div>
                 <hr className="rowDivider"/>

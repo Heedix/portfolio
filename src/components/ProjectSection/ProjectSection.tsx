@@ -8,6 +8,22 @@ export default function ProjectSection() {
         <div className="projectSection" id="projectSection">
             <SingleProjectSection
                 id={'currentFocus'}
+                title={'Knowledge Library'}
+                subtitle={'Movie rental service'}
+                description={`
+                    `}
+                previewVideoSrc={''}
+                designDescription={`
+                    `}
+                designPreview={{source: '', type: ''}}
+                technologiesUsed={['Docusaurus', 'Markdown', 'TypeScript', 'Node.js', 'Git', 'GitHub Actions', 'Docker']}
+                links={[
+                    {text: 'GitHub', link: 'https://github.com/Heedix/knowledge-library', icon: 'github'}
+                ]}
+                direction={'left'}
+            />
+
+            <SingleProjectSection
                 title={'Portfolio'}
                 subtitle={'My portfolio page'}
                 description={`
